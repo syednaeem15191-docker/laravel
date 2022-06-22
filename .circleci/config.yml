@@ -60,12 +60,12 @@ workflows:
   build-and-publish:
     jobs:
       - checkout
-      - build:
+      - build_laravel9:
           requires:
             - checkout
-      - publish:
+      - publish_laravel9:
           requires:
-            - build
+            - build_laravel9
           filters:
             branches:
               only:
