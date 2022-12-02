@@ -3,6 +3,6 @@ services:
   laravel9:
     build:
       context: laravel9
-    container_name: laravel9_api
+    container_name: laravel9_app
 #    ports:
 #      - ${API_PORT}:80
