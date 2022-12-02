@@ -8,9 +8,9 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash -
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN apt-get update && apt-get install -y openssl zip libzip-dev supervisor cron nodejs
+RUN apt-get update && apt-get install -y openssl zip libzip-dev supervisor cron nodejs libicu-dev
 
-RUN docker-php-ext-install bcmath zip pdo_mysql exif
+RUN docker-php-ext-install bcmath zip pdo_mysql exif intl
 
 RUN a2enmod rewrite && service apache2 restart
 
